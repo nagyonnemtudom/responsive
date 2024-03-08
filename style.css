@@ -44,14 +44,48 @@ nav{
     padding: 6px;
     background-color: aqua;
 }
-@media  screen and (max-widht:800px) {
+.menu{
+    margin: 0%;
+    padding: 0%;
+    list-style-type:none;
+}
+.menu li a{
+display: block;
+color: wheat;
+padding: 5px 20px;
+text-decoration: none;
+cursor:  pointer;
+}
+
+.menu li a:hover{
+    background-color: black;
+    color: aliceblue;
+}
+header h1{
+    font-size: 130%;
+}
+
+@media screen and (max-width:800px) {
     #content{
+        flex-direction: column;
+    }
+    #leftside, #center, #rightside {
+        width: auto;
+
+    }
+    #rightside{
+        display: none;
+    }
+    #center{
+        flex-grow: 1;
+    }
+    .menu li{
         display: block;
+        border-right: none;
+        border-bottom: 1px solid black;
     }
-    #leftside{
-        width: 100%;
-
+    .menu li:last-child{
+        border-bottom: none 1px;
     }
 
-    
 }
